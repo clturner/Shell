@@ -1,0 +1,101 @@
+.TH simple_shell 1  "1.0" "simple_shell man page"
+.SH NAME
+.B simple_shell
+\-  Command line interpreter (simple_shell)
+.B simple_shell
+.SH DESCRIPTION
+.B Simple_shell
+- is a simple implementation of the standard command line interpreter for your system. The c\
+urrent version of simple_shell has some of the features implemented on the the Bourne again \
+shell. The simple_shell features. The simple_shell features are ..........
+.PP
+.B Overview
+The simple_shell is a command line interpreter that reads lines from the users terminal or f\
+rom files. The
+Simple_shell is capable of executing commands from the user and executing the meaning of tho\
+se commands. Simple shell runs by compiling the simple_shell repository and running it by us\
+ing the command ./hsh. The simple_shell works with and command listed in the PATH\
+ and works in both interactive and non interactive mode.
+.PP
+.SH Invocation
+When first starting the simple_shell inspects the first argument given by the user and searc\
+hes the environmental variable env. The varible PATH is searched for files matching the comm\
+and name. If the file exists matching the user command the contents of the file are executed\
+. If more than one command line arguments are give the simple_shell treats the first argumen\
+t as the name of the file from which to run the command, and the remaining arguments are fla\
+gs specific to that command. The shell reads commands from the standard input.
+.PP
+.SH Commands
+The simple_shell reads commands from the user. The first command argument is taken and conca\
+tenated to the value of the PATH environmental variables deliminated by colons. If the comma\
+nd file is located it is implemented and returned to the user via standard out. If flags are\
+ used to alter the command and the command file can be located in the PATH the flags are imp\
+lemented along with the corresponding command.
+.PP
+.B Search and Execution
+- There are two types of commands; builtins and normal programs -- and the command is search\
+ed for by name in that order. Builtins and normal programs are executed differently.
+For builtin functions the user command is compared against the list of builtin functions and\
+ if a match is made the function is executed from within the shell. The simple_shell builtin\
+s are functions whose definitions are built directly into the shell, without creating a new \
+child process to execute the functions.
+Otherwise, if the user command given to the shell is not a built in command, the simple shel\
+l searches for the commands executable file in the computers environmental variable PATH. Ad\
+ditional flags given to the command are parsed and given to the executable program to perfor\
+m the corresponding action.
+.PP
+.B Path Search
+- The simple_shell searches each entry in the PATH for the command given. Tha value of PATH \
+is a series of absolute paths for directories separated by colons. Each absolute path is a d\
+irectory holding executable files corresponding to possible commands from the user.
+
+.PP
+.B Builtins
+- This section is a list of built in commands that are built into the shell. These commands \
+are built into the shell instead of reiding it the PATH as an executable for efficiency.
+.PP
+.I exit
+- Terminates a shell process.
+.PP
+.I printenv
+- prints the environment and all of it's variables for the current process.
+
+.SH Future Iterations
+.PP
+.B Aliases
+- The implementation for aliases is will be implemented in future iterations of the shell. A\
+n alias is a user created environmental variable. Once the functionality is completed the si\
+mple shell will check the user command against a list of aliases to see if there is a match.\
+ If a match is found it will either replace the function of the command with a user defined \
+function or add a completly new function to a new command. Aliases are convenient for users \
+who use different command strings often and would like to shorten the command for ease of us\
+e.
+
+.PP
+.B Piping and input/output redirections
+- Piping allows the result of a user command to be given to another command as input. Input/\
+output redirection will allow the user to redirect the input or the ouput of a file to be re\
+directed to another file.
+.PP
+.B Word Expansions
+- There are various types of expansions planned for the future.  Tilde expansions,  Paramete\
+r Expansion and Arithmetic Expansion.
+.PP
+.I Tilde expansions
+- All characters up to the backslash, as in ~/foo, are replaced by the users home directory.
+.I Parameter Expansion
+- A parameter expansion is in the form of ${parameter} where the value of the parameter is s\
+ubstituted for the variable. the parameter expansion should be enclosed in curly braces.
+.I Arithmetic Expansion
+- Arithmetic expansion provides a way to evaluate Arithmetic expressions and return their va\
+lue. expressions will be written in the form of $((expression)).
+.I Asterisk expansion
+- An asterisk (*) can be used to match any string of characters. When read by the compiler t\
+he asterisk's meaning will expand to match any string of characters.
+.SH BUGS
+Although they will raise errors with a corresponding response, unexecutable command requests will cause leaks until further notice. .
+.SH AUTHOR
+Naomi Sorrell (naomi.sorrell@holbertonschool.com)
+.PP
+Chris Turner (christopher.turner@holbertonschool.com)
+.SH simple_shell 1 "April, 15, 2017"
