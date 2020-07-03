@@ -1,8 +1,8 @@
-<img src="https://www.holbertonschool.com/assets/holberton-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" alt="Holberton Logo" style="width:205px;height:64px;">
+<img src="https://www.codeschool.com/assets/codeschool-logo-1cc451260ca3cd297def53f2250a9794810667c7ca7b5fa5879a569a457bf16f.png" alt="CodeSchool Logo" style="width:205px;height:64px;">
 <h1>Simple_Shell</h1>
 <h2>Simple implementation of a shell in c</h2>
 <h3>Description</h3>
-<h5>Simple implementation of a shell written in c for the Holberton School</h5>
+<h5>Simple implementation of a shell written in c for the CodeSchoolSF</h5>
 <h4>The purpose of this project is to:</h4>
 <ul>
   <li>Understand the basics of a shell</li>
@@ -20,7 +20,7 @@
 </ul>
   <h3>The Requirements</h3>
 <ul>
-  <li>Comply with Betty style guidelines created by Holberton school</li>
+  <li>Comply with Betty style guidelines created by CodeSchoolSF</li>
   <li>All code is complied with -Wall -Werror -Wextra -pedantic flags</li>
   <li>All files end with a new line</li>
   <li>Include no more than five functions per file</li>
@@ -51,7 +51,7 @@ tokenize.c |  Function to tokenize a line
 
 Instruction | Command
 ------------ | -------------
-Clone repo | git clone https://github.com/NamoDawn/simple_shell.git
+Clone repo | git clone https://github.com/clturner/Shell.git
 Complile all files | gcc -Wall -Werror -Wextra -pedantic *.c -o simple_shell
 Run the executable | ./simple_shell
 Type commands | $ ls -l
@@ -75,9 +75,8 @@ Type commands | $ ls -l
 <h3>Bugs</h3>
 <h4>Theree are some memory leaks when the simple_shell receives unexecutable arguments</h4>
 <h3>Authors</h3>
-<h4>Chris Turner - <a href="https://github.com/clturner">Github</a> || <a href=\
-"mailto:christopher.turner@holbertonschool.com?Subject=Hello%20again" target="_\
-top">Email</a></h4>
+<h4>Chris Turner - <a href="https://github.com/clturner">Github</a> || <a href="mailto:clturner23@gmail.com?Subject=Hello%20again" target="_top">Email</a></h4>
+
 <h4>Naomi Sorrell - <a href="https://github.com/NamoDawn">Github</a> || <a href=\
 "mailto:naomi.sorrell@holbertonschool.com?Subject=Hello%20again" target="_\
 top">Email</a></h4>

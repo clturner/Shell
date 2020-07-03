@@ -95,7 +95,7 @@ he asterisk's meaning will expand to match any string of characters.
 .SH BUGS
 Although they will raise errors with a corresponding response, unexecutable command requests will cause leaks until further notice. .
 .SH AUTHOR
-Naomi Sorrell (naomi.sorrell@holbertonschool.com)
+Chris Turner (naomi.sorrell@codeschool.com)
 .PP
-Chris Turner (christopher.turner@holbertonschool.com)
+Chris Turner (christopher.turner@codeschool.com)
 .SH simple_shell 1 "April, 15, 2017"
